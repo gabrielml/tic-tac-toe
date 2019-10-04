@@ -4,16 +4,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 
-class Square extends React.Component {
-	render() {
+function Square(props) {
 		return (
 			<button
 				className="square"
-				onClick={() => this.props.onClick()}>
-				{this.props.value}
+				onClick={props.onClick}>
+				{props.value}
 			</button>
 		);
-	}
 }
 
 class Board extends React.Component {
@@ -88,4 +86,4 @@ ReactDOM.render(
 	document.getElementById('root')
 );
 
-// TODO: Completing the Game.
+// TODO: 191005 Continue with Function Components and read Optimizing Performance.
